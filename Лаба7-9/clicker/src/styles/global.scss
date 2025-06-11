@@ -1,0 +1,173 @@
+// src/styles/global.scss
+
+.app {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 50, 0.6);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    color: #eef1f7;
+    background-color: #0a1a40; // темно-синій фон, але буде замінено динамічно скинами
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #e0e6ff;
+    text-shadow: 0 0 10px #6270ff;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .click-button, .prestige-button {
+    font-size: 1.6rem;
+    padding: 18px 45px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 6px 15px rgba(100, 110, 255, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+    width: 320px;
+    max-width: 90vw;
+    user-select: none;
+  }
+  
+  .click-button {
+    background-color: #4b57ff;
+    color: #fff;
+    text-shadow: 0 0 8px #a1aaff;
+  }
+  
+  .click-button:hover {
+    background-color: #6c79ff;
+    box-shadow: 0 8px 20px #7287ff;
+    transform: scale(1.05);
+  }
+  
+  .prestige-button {
+    background-color: #ff5c5c;
+    color: #fff;
+    text-shadow: 0 0 10px #ff8c8c;
+    margin-top: 15px;
+  }
+  
+  .prestige-button:hover {
+    background-color: #ff7a7a;
+    box-shadow: 0 8px 20px #ff7272;
+    transform: scale(1.05);
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 600px) {
+    .stats {
+      flex-direction: column;
+      gap: 12px;
+      font-size: 1.1rem;
+    }
+  
+    .click-button, .prestige-button {
+      width: 100%;
+      padding: 16px 0;
+    }
+  }
+  // Додай зверху, або створи клас .root-wrapper
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #272a6a;  // чорний фон
+    overflow-y: auto;        // вертикальний скрол
+  }
+  
+  .root-wrapper {
+    min-height: 100vh;       // щоб займати мінімум весь екран по висоті
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  // щоб не центрувало по вертикалі, а зверху
+    background-color: transparent;  // фон взяли у body
+    padding: 40px 0;         // відступи зверху/знизу для краси
+    box-sizing: border-box;
+  }
+
+  .click-button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.5);
+    user-select: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .achievement-popup {
+    animation: fadeInOut 4s ease-in-out;
+    z-index: 999;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  .achievement-popup {
+    animation: fadeInOut 4s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  

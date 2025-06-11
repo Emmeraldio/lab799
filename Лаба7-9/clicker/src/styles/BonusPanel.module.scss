@@ -1,0 +1,15 @@
+.bonus-panel {
+    margin: 2rem 0;
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #65e57b;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #4ec064;
+      }
+    }
+  }
+  

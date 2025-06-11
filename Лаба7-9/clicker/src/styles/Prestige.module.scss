@@ -1,0 +1,21 @@
+.prestige {
+    margin: 2rem 0;
+    button {
+      padding: 0.5rem 1rem;
+      background: #f25c54;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+  
+      &:hover {
+        background: #c13d39;
+      }
+  
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
